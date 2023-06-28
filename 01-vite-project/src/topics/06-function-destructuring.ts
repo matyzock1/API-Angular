@@ -21,13 +21,15 @@ const tablet: Product = {
 
 function taxCalculation( options:TaxCalculationOptions ):[number, number] {
 
+    const {tax, products} = options;
+
     let total = 0;
 
-    options.products.forEach(({ price }) => {
+    products.forEach(({ price }) => {
         total += price;
     });
 
-    return [total, total * options.tax]
+    return [total, total * tax]
 };
 
 const shoppingCart = [phone, tablet];
@@ -40,6 +42,5 @@ const [total, totalTax] = taxCalculation({
 
 console.log("Total: ", total);
 console.log("Tax: ", totalTax);
-
 
 export {};
