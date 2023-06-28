@@ -16,7 +16,7 @@ const addNumbersArrow = (a:number, b:number):string  => {
 function multiply(firstNumber:number, _secondNumber?:number, base:number = 2){
     return firstNumber * base;
 }
-    
+
  
 const result:number = addNumbers(1,2)
 const result2:string = addNumbersArrow(3,4)
