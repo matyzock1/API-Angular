@@ -1,6 +1,6 @@
 
 //Interfaces de producto y TaxCalculation
-interface Product {
+export interface Product {
     description:string;
     price:number;
 }
@@ -23,7 +23,7 @@ const tablet: Product = {
 };
 
 //Funcion taxCalculation donde le pasamos options TaxCalculationOptions como argumento
-function taxCalculation( options:TaxCalculationOptions ):[number, number] {
+export function taxCalculation( options:TaxCalculationOptions ):[number, number] {
 
     //Destructarmos las opciones en tax y productos
     const {tax, products} = options;
@@ -42,7 +42,7 @@ function taxCalculation( options:TaxCalculationOptions ):[number, number] {
 
 //Creamos 2 variables que almancenarán los productos y el tax.
 const shoppingCart = [phone, tablet];
-const tax = 0.15;
+export const tax = 0.15;
 
 //Le pasamos a la funcion el total de productos y el tax.
 const [total, totalTax] = taxCalculation({
@@ -51,7 +51,7 @@ const [total, totalTax] = taxCalculation({
 });
 
 //Imprimimos los valores total y totalTax.
-console.log("Total: ", total);
-console.log("Tax: ", totalTax);
+// console.log("Total: ", total);
+// console.log("Tax: ", totalTax);
 
 export {};
