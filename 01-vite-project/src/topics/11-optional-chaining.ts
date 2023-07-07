@@ -8,10 +8,10 @@ export interface Passenger {
 const passenger1: Passenger = {
     name: "Matías",
 }
-const passenger2: Passenger = {
-    name: "Jean",
-    children: ['Pico', 'Raja']
-}
+// const passenger2: Passenger = {
+//     name: "Jean",
+//     children: ['Pico', 'Raja']
+// }
 
 const returnChildrenNumber = (passenger: Passenger):number => {
 
@@ -24,5 +24,6 @@ const returnChildrenNumber = (passenger: Passenger):number => {
 
     return howManyChildren;
 }
+
 
 returnChildrenNumber(passenger1);

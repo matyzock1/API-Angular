@@ -9,7 +9,7 @@ import { setupCounter } from './counter.ts'
 // import './topics/07-import.export'
 // import './topics/08-clases'
 // import './topics/10-decorators'
-import './topics/11-optional-chaining'
+// import './topics/11-optional-chaining'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

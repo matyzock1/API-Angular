@@ -8,9 +8,6 @@ function classDecorator(
     }
 }
 
-
-
-
 // @classDecorator
 class SuperClass {
     public myProperty: string = 'abc123'

@@ -15,7 +15,7 @@ const audioPlayer: AudioPlayer = {
     songDuration: 36,
     song: "Te necesito",
     details: {
-        author: "Anuel",
+        author: "Anuel", 
         year: 2018
     }
 }
