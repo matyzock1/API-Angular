@@ -1,0 +1,42 @@
+.container.listaAPI {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+/* Estilo para el título */
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilo para el ítem de la lista */
+.list-group-item {
+  border: none;
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+.list-group-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilo para la imagen */
+img {
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+span.me-3.p-2 {
+  font-size: 30px; /* Ajusta el valor según el tamaño deseado */
+  font-weight: bold;
+}
+
+.episode {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+div.mb-2.p-2{
+  font-size: 20px;
+}

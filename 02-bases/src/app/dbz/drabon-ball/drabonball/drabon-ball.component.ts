@@ -1,4 +1,4 @@
-import { Component , OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../../service/api.service';
 
 @Component({
@@ -6,20 +6,22 @@ import { ApiService } from '../../../service/api.service';
   templateUrl: './drabon-ball.component.html',
   styleUrls: ['./drabon-ball.component.css']
 })
-export class DrabonBallComponent implements OnInit{
+export class DrabonBallComponent implements OnInit {
 
   data: any[] = [];
+  titulo: String = 'RICK AND MORTY | API';
+  subTitulo: String = 'Episodios en los que aparece:';
 
-  constructor(private ApiService:ApiService){}
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.llenarData();
   }
 
-  llenarData(){
-    this.ApiService.getData().subscribe(data => {
+  llenarData() {
+    this.apiService.getData().subscribe(data => {
       this.data = data;
       console.log(this.data);
-    })
+    });
   }
 }

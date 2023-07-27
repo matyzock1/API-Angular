@@ -1,4 +1,26 @@
-<div>
-  <h2>Data API Demo</h2>
-  <li *ngFor="let item of data">{{ item.name }}</li>
+<!-- <div class="container listaAPI">
+  <h2 class="mb-4">{{titulo}}</h2>
+  <ul class="list-group">
+    <li *ngFor="let item of data" class="list-group-item d-flex align-items-center">
+      <img src="{{ item.image }}" alt="{{ item.name }}" width="150" height="150" class="me-3 p-2">
+      <span class="me-3 p-2">{{ item.name }}</span>
+      <span class="episode">Episodes: {{ item.episode }}</span>
+    </li>
+  </ul>
+</div>
+ -->
+ <div class="container listaAPI">
+  <h2 class="mb-4">{{ titulo }}</h2>
+  <ul class="list-group">
+    <li *ngFor="let item of data" class="list-group-item d-flex align-items-start">
+      <img src="{{ item.image }}" alt="{{ item.name }}" width="150" height="150" class="me-3 p-2">
+      <div>
+        <span class="me-3 p-2">{{ item.name }}</span>
+        <div class="mb-2 p-2">{{subTitulo}}</div>
+        <ul class="episodes">
+          <li *ngFor="let episode of item.episodeNames" class="episode">{{ episode }}</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
 </div>
