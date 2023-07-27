@@ -1,16 +1,14 @@
-<!-- <div class="container listaAPI">
-  <h2 class="mb-4">{{titulo}}</h2>
-  <ul class="list-group">
-    <li *ngFor="let item of data" class="list-group-item d-flex align-items-center">
-      <img src="{{ item.image }}" alt="{{ item.name }}" width="150" height="150" class="me-3 p-2">
-      <span class="me-3 p-2">{{ item.name }}</span>
-      <span class="episode">Episodes: {{ item.episode }}</span>
-    </li>
-  </ul>
-</div>
- -->
- <div class="container listaAPI">
+<div class="container listaAPI">
   <h2 class="mb-4">{{ titulo }}</h2>
+
+  <form (ngSubmit)="buscarPersonaje()" class="form-inline">
+    <div class="form-group mr-2">
+      <label for="personajeNumero" class="mr-2">Buscar por número de personaje:</label>
+      <input type="number" id="personajeNumero" [(ngModel)]="numeroPersonaje" name="numeroPersonaje" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Buscar</button>
+  </form>
+
   <ul class="list-group">
     <li *ngFor="let item of data" class="list-group-item d-flex align-items-start">
       <img src="{{ item.image }}" alt="{{ item.name }}" width="150" height="150" class="me-3 p-2">

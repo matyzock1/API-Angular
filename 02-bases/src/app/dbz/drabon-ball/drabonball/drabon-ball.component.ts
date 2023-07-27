@@ -11,6 +11,7 @@ export class DrabonBallComponent implements OnInit {
   data: any[] = [];
   titulo: String = 'RICK AND MORTY | API';
   subTitulo: String = 'Episodios en los que aparece:';
+  numeroPersonaje: number = 1;
 
   constructor(private apiService: ApiService) { }
 
@@ -20,6 +21,13 @@ export class DrabonBallComponent implements OnInit {
 
   llenarData() {
     this.apiService.getData().subscribe(data => {
+      this.data = data;
+      console.log(this.data);
+    });
+  }
+
+  buscarPersonaje() {
+    this.apiService.getDataByCharacterNumber(this.numeroPersonaje).subscribe(data => {
       this.data = data;
       console.log(this.data);
     });

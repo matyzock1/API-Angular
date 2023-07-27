@@ -22,6 +22,7 @@ import { AppComponent } from './app.component';
     HeroesModule,
     DragonBallModule,
 
+
   ],
   providers: [],
   bootstrap: [AppComponent]

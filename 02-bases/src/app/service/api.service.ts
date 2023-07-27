@@ -8,7 +8,7 @@ import { map, mergeMap } from 'rxjs/operators';
 })
 export class ApiService {
 
-  private urlApi = 'https://rickandmortyapi.com/api/character/14,1,4,5,6,7';
+  private urlApi = 'https://rickandmortyapi.com/api/character';
 
   constructor(private http: HttpClient) { }
 
@@ -24,6 +24,20 @@ export class ApiService {
               character.episodeNames = episodes[index];
             });
             return characters;
+          })
+        );
+      })
+    );
+  }
+
+  public getDataByCharacterNumber(characterNumber: number): Observable<any[]> {
+    const url = `${this.urlApi}/${characterNumber}`;
+    return this.http.get<any>(url).pipe(
+      mergeMap((character) => {
+        return this.getEpisodeNames(character.episode).pipe(
+          map((episodeNames) => {
+            character.episodeNames = episodeNames;
+            return [character];
           })
         );
       })
