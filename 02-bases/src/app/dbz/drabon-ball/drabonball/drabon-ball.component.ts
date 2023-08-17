@@ -32,4 +32,15 @@ export class DrabonBallComponent implements OnInit {
       console.log(this.data);
     });
   }
+
+  getStatusColor(status: string): string {
+    switch(status){
+      case 'Alive':
+        return 'green';
+      case 'Dead':
+        return 'red';
+      default:
+        return 'black';
+    }
+  }
 }

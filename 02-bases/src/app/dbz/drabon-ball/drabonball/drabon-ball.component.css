@@ -41,6 +41,14 @@ div.mb-2.p-2{
   font-size: 20px;
 }
 
+/* 'font-size': '20px', 'text-transform': 'uppercase'   */
+
+.alive-dead-div{
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 #personajeNumero{
   width: 250px;
 }
