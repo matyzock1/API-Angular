@@ -14,6 +14,10 @@
       <img src="{{ item.image }}" alt="{{ item.name }}" width="150" height="150" class="me-3 p-2">
       <div>
         <span class="me-3 p-2">{{ item.name }}</span>
+        <div class="alive-dead-div me-3 p-2" *ngIf="item.status === 'Alive' && item.gender">
+          <span class="me-2">Gender:</span>
+          <i class="fas fa-{{ item.gender === 'Male' ? 'mars' : 'venus' }}" [ngStyle]="{'color': item.gender === 'Male' ? 'blue' : 'pink'}"></i> <span class="black-text">{{ item.gender }}</span>
+        </div>
         <div class="alive-dead-div me-3 p-2" [ngStyle]="{ 'color': getStatusColor(item.status)}">{{ item.status }}</div>
         <div class="mb-2 p-2">{{subTitulo}}</div>
         <ul class="episodes">

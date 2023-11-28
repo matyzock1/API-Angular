@@ -49,6 +49,24 @@ div.mb-2.p-2{
   font-weight: bold;
 }
 
+.gender-icon {
+  display: flex;
+  align-items: center;
+}
+
+.male {
+  color: blue; /* Color para el icono de género masculino */
+  margin-right: 5px;
+}
+
+.female {
+  color: pink; /* Color para el icono de género femenino */
+  margin-right: 5px;
+}
+
+.black-text {
+  color: black; /* Color para el texto */
+}
 #personajeNumero{
   width: 250px;
 }
